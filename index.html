@@ -137,21 +137,35 @@ footer{
 
 @media(max-width:768px){
 
-header{
-    flex-direction:column;
-}
+    header{
+        /* ဖုန်း screen တွင် အပေါ်အောက်/ဘေး padding ကို လျှော့ချရန် */
+        padding: 15px 20px; 
+        flex-direction:column;
+    }
 
-nav{
-    margin-top:15px;
-}
+    nav{
+        margin-top:15px;
+    }
 
-.hero h1{
-    font-size:38px;
-}
+    /* စာသားများ ဘေးမလျှံစေရန် ဖုန်း screen တွင် ပတ်ပတ်လည် padding ကို လျှော့ရန် */
+    section{
+        padding: 40px 5%;
+    }
 
-.hero p{
-    font-size:18px;
-}
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    /* အီးမေးလ်နှင့် လင့်ခ် စာသားအရှည်ကြီးများ ဖုန်း screen အလိုက် အလိုအလျောက် ဆင်းသွားစေရန် */
+    .contact p {
+        word-break: break-all;
+        overflow-wrap: break-word;
+        padding: 0 10px;
+    }
 
 }
 #contact-form{
