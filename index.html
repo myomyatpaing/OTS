@@ -228,6 +228,85 @@ font-size:18px;
 width:60px;
 height:60px;
 }
+    /* --- Desktop မှာ Hamburger ကို ဖျောက်ထားရန် --- */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* --- Mobile View Settings --- */
+@media(max-width: 768px) {
+    header {
+        position: relative; /* Menu အနေအထား ထိန်းရန် */
+        flex-direction: row !important; /* Logo နဲ့ Hamburger ဘေးတိုက်ပြရန် */
+        justify-content: space-between;
+        padding: 15px 20px;
+    }
+
+    .hamburger {
+        display: flex; /* ဖုန်းမှာ Hamburger ပေါ်လာစေရန် */
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Header ရဲ့ အောက်ကနေ ကပ်ပြီး ကျလာစေရန် */
+        left: 0;
+        width: 100%;
+        background: #FFFFFF;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        padding: 20px 0;
+        margin-top: 0 !important;
+        
+        /* အစပထမတွင် Menu ကို ဝှက်ထားရန် */
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+    }
+
+    /* JavaScript ကနေ .active class ထည့်ပေးလိုက်ရင် Menu ပွင့်လာမည် */
+    nav.active {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    nav a {
+        margin: 12px 0 !important;
+        text-align: center;
+        width: 100%;
+        font-size: 18px;
+    }
+
+    /* 🍔 Hamburger ကို နှိပ်လိုက်ရင် ❌ ပုံစံ ပြောင်းသွားစေရန် (Optional) */
+    .hamburger.toggle span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .hamburger.toggle span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.toggle span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+}
 </style>
 
 </head>
@@ -235,13 +314,19 @@ height:60px;
 
 <header>
     <div class="logo">
-    <img src="https://raw.githubusercontent.com/myomyatpaing/OTS/main/logo.png" class="logo" alt="OTS Logo">
-</div>
+        <img src="https://raw.githubusercontent.com/myomyatpaing/OTS/main/logo.png" class="logo" alt="OTS Logo">
+    </div>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+    <button class="hamburger" id="hamburger-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav id="nav-menu">
+        <a href="#about" onclick="closeMenu()">About</a>
+        <a href="#services" onclick="closeMenu()">Services</a>
+        <a href="#contact" onclick="closeMenu()">Contact</a>
     </nav>
 </header>
 
@@ -480,6 +565,22 @@ console.log(error);
 <p>🌐 https://optimizedtechnologysolutions.vercel.app/</p>
 
 </section>
+    <script>
+const hamburger = document.getElementById('hamburger-btn');
+const navMenu = document.getElementById('nav-menu');
+
+// Hamburger ကို နှိပ်ရင် Menu ပွင့်/ပိတ် လုပ်ရန်
+hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    hamburger.classList.toggle('toggle');
+});
+
+// Menu item တစ်ခုခုကို နှိပ်လိုက်ရင် Menu ပြန်ပိတ်သွားရန်
+function closeMenu() {
+    navMenu.classList.remove('active');
+    hamburger.classList.remove('toggle');
+}
+</script>
 <footer>
 
 <p>
