@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Optimized Technology Solutions</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    line-height:1.6;
+    color:#333;
+}
+
+header{
+    background:#FFFFFF;
+    color:black;
+    padding:20px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo img{
+    height:60px;
+    width:auto;
+}
+
+nav a{
+    color:black;
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#00b4d8;
+}
+
+.hero{
+    background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1600');
+    background-size:cover;
+    background-position:center;
+    height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+.btn{
+    background:#00b4d8;
+    color:white;
+    padding:15px 30px;
+    border-radius:5px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+section{
+    padding:80px 10%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:38px;
+    margin-bottom:50px;
+    color:#0d1b2a;
+}
+
+.about{
+    text-align:center;
+    max-width:900px;
+    margin:auto;
+    font-size:18px;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#f8f9fa;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    color:#0077b6;
+    margin-bottom:15px;
+}
+
+.contact{
+    background:#0d1b2a;
+    color:white;
+    text-align:center;
+}
+
+.contact p{
+    margin:10px 0;
+    font-size:18px;
+}
+
+footer{
+    background:#08131f;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+}
+
+nav{
+    margin-top:15px;
+}
+
+.hero h1{
+    font-size:38px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+}
+#contact-form{
+
+max-width:600px;
+margin:auto;
+
+display:flex;
+flex-direction:column;
+gap:15px;
+
+}
+
+#contact-form input,
+#contact-form textarea{
+
+padding:15px;
+border:none;
+border-radius:8px;
+
+font-size:16px;
+
+}
+
+#contact-form textarea{
+
+height:150px;
+resize:none;
+
+}
+
+#contact-form button{
+
+padding:15px;
+
+background:#00b4d8;
+color:white;
+
+border:none;
+border-radius:8px;
+
+font-size:18px;
+cursor:pointer;
+
+}
+
+#contact-form button:hover{
+
+opacity:.9;
+
+}
+
+#success{
+
+margin-top:20px;
+font-size:18px;
+
+}
+.logo{
+width:60px;
+height:60px;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <div class="logo">
+    <img src="../images/logo.png" class="logo" alt="OTS Logo">
+</div>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+
+<div>
+
+<h1>Optimized Technology Solutions</h1>
+
+<p>
+Empowering Businesses with Reliable Networking,
+Security and IT Infrastructure Solutions
+</p>
+
+<a href="#services" class="btn">Explore Services</a>
+
+</div>
+
+</section>
+
+
+<section id="about">
+
+<h2 class="section-title">About Us</h2>
+
+<div class="about">
+
+<p>
+
+Optimized Technology Solutions (OTS) is a professional System Integrator providing
+end-to-end IT infrastructure, network and security solutions for businesses,
+offices and campuses.
+
+We specialize in designing, implementing and maintaining reliable and scalable
+technology environments that improve productivity, enhance security and support
+business growth.
+
+</p>
+
+</div>
+
+</section>
+
+
+<section id="services">
+
+<h2 class="section-title">Our Services</h2>
+
+<div class="services">
+
+<div class="card">
+
+<h3>Office & Campus Network Solutions</h3>
+
+<p>
+Design and deployment of structured cabling,
+LAN/WAN infrastructure, switching and routing
+for offices and campuses.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Firewall & Security Solutions</h3>
+
+<p>
+Advanced cybersecurity solutions including
+Next-Generation Firewalls, VPN, IPS,
+Web Filtering and Threat Protection.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Wireless Network & WiFi Solutions</h3>
+
+<p>
+Enterprise-grade WiFi design and deployment
+for offices, hotels, schools and campuses with
+high performance and seamless coverage.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>CCTV Solutions</h3>
+
+<p>
+IP CCTV surveillance systems with remote monitoring,
+high-definition recording and intelligent security features.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>IT Support & Maintenance</h3>
+
+<p>
+Preventive maintenance, troubleshooting,
+remote support and onsite IT services
+to keep your business running smoothly.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>System Integration</h3>
+
+<p>
+Integrating networking, security,
+wireless and surveillance systems
+into one optimized and manageable solution.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+<h2 class="section-title" style="color:white;">
+Contact Us
+</h2>
+
+<form id="contact-form">
+
+<input type="text"
+id="name"
+placeholder="Your Name"
+required>
+
+<input type="email"
+id="email"
+placeholder="Your Email"
+required>
+
+<input type="text"
+id="subject"
+placeholder="Subject"
+required>
+
+<textarea
+id="message"
+placeholder="Your Message"
+required></textarea>
+
+<button type="button"
+onclick="sendMail()">
+Send Message
+</button>
+
+</form>
+
+<div id="success"></div>
+
+</section>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+
+emailjs.init("s1POzNybtOgpG4QDA");
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+
+emailjs.init("s1POzNybtOgpG4QDA");
+
+function sendMail(){
+
+let params = {
+
+from_name: document.getElementById("name").value,
+
+from_email: document.getElementById("email").value,
+
+subject: document.getElementById("subject").value,
+
+message: document.getElementById("message").value
+
+};
+
+emailjs.send(
+
+"service_p83ohtg",
+
+"template_4j0jigl",
+
+params
+
+)
+
+.then(function(){
+
+document.getElementById("success").innerHTML =
+"✅ Message sent successfully.";
+
+document.getElementById("contact-form").reset();
+
+})
+
+.catch(function(error){
+
+document.getElementById("success").innerHTML =
+"❌ Failed to send message.";
+
+console.log(error);
+
+});
+
+}
+
+</script>
+
+<section class="contact" id="contact">
+
+<p>📍 Mayangone Township, Yangon, Myanmar</p>
+
+<p>📞 +95 9971803030, +95 9779989951</p>
+
+<p>✉ optimizedtechnology2227777@gmail.com</p>
+
+<p>🌐 www.optimizedtechnologysolutions.com</p>
+
+</section>
+<footer>
+
+<p>
+© 2026 Optimized Technology Solutions.
+All Rights Reserved.
+</p>
+
+</footer>
+
+</body>
+</html>
